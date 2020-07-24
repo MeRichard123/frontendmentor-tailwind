@@ -1,0 +1,16 @@
+{
+  "name": "base-apparel-coming-soon-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^1.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:css": "tailwind build base/tailwindbase.css -o src/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
