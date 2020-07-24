@@ -43,6 +43,11 @@
       #mark {
         transform: translateX(-4rem) translateY(50%);
       }
+      @media screen and (max-width: 900px) {
+        #image {
+          width: 100%;
+        }
+      }
       @media screen and (min-width: 1000px) {
         #mark {
           transform: translateX(-8rem) translateY(50%);
@@ -51,12 +56,12 @@
     </style>
   </head>
   <body class="font-Josefin">
-    <div id="logo" class="m-3 lg:fixed lg:mx-32">
+    <div id="logo" class="m-3 lg:fixed lg:mx-32 lg:mt-6">
       <img src="./images/logo.svg" alt="" />
     </div>
-    <main class="lg:grid lg:grid-cols-2">
-      <section class="lg:col-start-2 lg:col-end-3">
-        <picture class="w-full">
+    <main class="lg:grid lg:grid-cols-2 lg">
+      <div class="lg:col-start-2 lg:col-end-3" style="justify-self: end;">
+        <picture class="md-full">
           <source
             media="(min-width: 1440px )"
             srcset="./images/hero-desktop.jpg"
@@ -68,11 +73,12 @@
           <img
             src="./images/hero-desktop.jpg"
             alt=""
-            class="w-full my-5 lg:m-0 lg:h-screen"
+            id="image"
+            class="h-full object-cover my-5 lg:m-0 lg:h-screen"
           />
         </picture>
-      </section>
-      <section
+      </div>
+      <div
         style="background-image: url('../images/bg-pattern-desktop.svg');"
         class="flex flex-col justify-center my-0 mb-5 mx-auto flex-auto items-center lg:items-start lg:px-32 lg:col-start-1 lg:col-end-2 lg:row-start-1"
       >
@@ -92,10 +98,11 @@
           launch deals.
         </p>
 
-        <form action="" id="form" class="relative lg:w-4/5 lg:w-4/5">
+        <form id="form" class="relative lg:w-4/5 lg:w-4/5">
           <input
             type="text"
             name="email"
+            aria-label="email input"
             id="email-input"
             placeholder="Email Address"
             class="border p-3 border-solid border-red rounded-full lg:w-full"
@@ -103,6 +110,7 @@
           <button type="submit" class="outline-none absolute top-0 right-0">
             <img
               src="./images/icon-arrow.svg"
+              aria-label="submit button"
               class="button p-4 px-6 lg:px-12 rounded-full cursor-pointer shadow"
               alt=""
             />
@@ -117,7 +125,7 @@
         <span class="text-softRed text-xs my-2 invisible" id="error"
           >Please enter a valid email</span
         >
-      </section>
+      </div>
     </main>
 
     <footer>
